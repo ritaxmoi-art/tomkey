@@ -73,7 +73,8 @@
     };
 };
 
-&trackball_peripheral_listener {
+/* 一番下のセンサー指定の名前を修正 */
+&trackball_listener {
     status = "okay";
     layers = <5>;
 };
