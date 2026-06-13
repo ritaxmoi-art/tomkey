@@ -4,11 +4,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors {
-        automouse: automouse {
+  behaviors {
+        pmo3610_auto_mouse_behavior: pmo3610_auto_mouse_behavior {
             compatible = "zmk,behavior-automouse";
             #binding-cells = <0>;
-            target-layer = <5>;
+            target-layer = <5>; // MOUSE（上から2番目＝レイヤー1）に飛ばす
             delay-ms = <0>;
             timeout-ms = <1000>;
         };
@@ -73,8 +73,7 @@
     };
 };
 
-/* 一番下のセンサー指定の名前を修正 */
-&trackball_listener {
+&pmo3610_listener {
     status = "okay";
     layers = <5>;
 };
