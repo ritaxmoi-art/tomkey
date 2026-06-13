@@ -27,10 +27,10 @@
 
         NUM {
             bindings = <
-&kp GRAVE                &kp NUMBER_7  &kp NUMBER_8  &kp LG(LS(NUMBER_4))  &kp PLUS                          &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &kp ASTERISK  &trans      &trans  &kp EXCLAMATION   &kp AT_SIGN        &kp POUND       &kp DOLLAR            &kp SEMI
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp PERIOD    &trans      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                   &trans        &trans        &trans                &trans        &trans      &trans  &kp LEFT_SHIFT                                                             &trans
+&kp GRAVE                &kp NUMBER_7  &kp NUMBER_8  &kp LG(LS(NUMBER_4))  &kp PLUS                          &kp CARET         &kp AMPERSAND    &kp LS(N8)         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &kp ASTERISK  &trans      &trans  &kp QUESTION      &kp EXCLAMATION  &kp RIGHT_BRACKET  &kp BACKSLASH         &kp SEMI
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp PERIOD    &trans      &trans  &kp LEFT_BRACKET  &kp AT_SIGN      &kp COMMA          &kp PERIOD            &kp MINUS
+&trans                   &trans        &trans        &trans                &trans        &trans      &trans  &kp LEFT_SHIFT                                                              &trans
             >;
         };
 
