@@ -9,10 +9,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E     &kp R           &kp T                                                 &kp Y        &kp U  &kp I     &kp O         &kp P
-&kp A       &kp S         &kp D     &kp F           &kp G                 &kp GRAVE        &kp ESC        &kp H        &kp J  &kp K     &kp L         &mkp MB4
-&kp Z       &kp X         &kp C     &kp V           &kp B                 &kp TAB          &kp DELETE     &kp N        &kp M  &mkp MB1  &lt 2 PERIOD  &mkp MB2
-&lt 6 INT2  &kp LEFT_WIN  &kp LALT  &kp LEFT_SHIFT  &mt LEFT_SHIFT SPACE  &lt 3 SPACE      &kp BACKSPACE  &lt 4 ENTER                                 &mkp MB5
+&kp Q         &kp W         &kp E     &kp R        &kp T                                                 &kp Y        &kp U  &kp I     &kp O         &kp P
+&kp A         &kp S         &kp D     &kp F        &kp G                 &kp GRAVE        &kp ESC        &kp H        &kp J  &kp K     &kp L         &mkp MB4
+&kp Z         &kp X         &kp C     &kp V        &kp B                 &kp TAB          &kp DELETE     &kp N        &kp M  &mkp MB1  &lt 2 PERIOD  &mkp MB2
+&lt 6 ESCAPE  &kp LEFT_WIN  &kp LALT  &lt 6 SPACE  &mt LEFT_SHIFT SPACE  &lt 3 SPACE      &kp BACKSPACE  &lt 4 ENTER                                 &mkp MB5
             >;
         };
 
@@ -36,10 +36,10 @@
 
         ARROW {
             bindings = <
-&kp GRAVE  &kp LC(LS(TAB))         &kp LG(RIGHT)  &kp NUMBER_9             &kp NUMBER_0                                   &kp ESCAPE        &trans           &kp LS(N8)         &kp LEFT_PARENTHESIS  &trans
-&kp TAB    &kp LA(LG(LEFT_ARROW))  &kp LG(LEFT)   &kp LG(LA(RIGHT_ARROW))  &kp LEFT_BRACKET   &trans       &kp ESCAPE     &kp QUESTION      &kp EXCLAMATION  &kp RIGHT_BRACKET  &kp BACKSLASH         &kp COLON
-&kp LCMD   &kp LG(LS(LEFT_ARROW))  &trans         &kp LG(LS(RIGHT_ARROW))  &kp RIGHT_BRACKET  &kp TAB      &kp DELETE     &kp LEFT_BRACKET  &kp AT_SIGN      &kp COMMA          &kp PERIOD            &kp MINUS
-&trans     &trans                  &trans         &trans                   &trans             &trans       &kp BACKSPACE  &kp ENTER                                                                   &kp SLASH
+&kp NUMBER_1  &kp NUMBER_2            &kp NUMBER_3  &kp NUMBER_4             &kp NUMBER_0                                   &kp ESCAPE        &trans           &kp LS(N8)         &kp LEFT_PARENTHESIS  &trans
+&kp TAB       &kp LA(LG(LEFT_ARROW))  &kp LG(LEFT)  &kp LG(LA(RIGHT_ARROW))  &kp LEFT_BRACKET   &trans       &kp ESCAPE     &kp QUESTION      &kp EXCLAMATION  &kp RIGHT_BRACKET  &kp BACKSLASH         &kp COLON
+&kp LCMD      &kp LG(LS(LEFT_ARROW))  &trans        &kp LG(LS(RIGHT_ARROW))  &kp RIGHT_BRACKET  &kp TAB      &kp DELETE     &kp LEFT_BRACKET  &kp AT_SIGN      &kp COMMA          &kp PERIOD            &kp MINUS
+&trans        &trans                  &trans        &trans                   &trans             &trans       &kp BACKSPACE  &kp ENTER                                                                   &kp SLASH
             >;
         };
 
@@ -63,10 +63,10 @@
 
         layer_6 {
             bindings = <
-&kp LG(Q)      &kp LC(W)  &trans     &trans     &trans                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp LG(LS(Z))  &trans     &kp LC(C)  &trans     &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
-&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
-&trans         &trans     &trans     &trans     &trans  &trans      &trans  &trans                                                  &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_4                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &trans        &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                                  &trans
             >;
         };
     };
