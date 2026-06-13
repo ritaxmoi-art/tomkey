@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    /* 1. 自動切り替え（automouse）の機能を定義する場所 */
     behaviors {
         automouse: automouse {
             compatible = "zmk,behavior-automouse";
@@ -15,7 +14,6 @@
         };
     };
 
-    /* 2. キーマップ（レイヤー0〜5）の設定 */
     keymap {
         compatible = "zmk,keymap";
 
@@ -75,7 +73,6 @@
     };
 };
 
-/* 3. トラックボールの動きを監視して自動切り替え（レイヤー5）を起動 */
 &trackball_peripheral_listener {
     status = "okay";
     layers = <5>;
