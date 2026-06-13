@@ -4,76 +4,70 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-  behaviors {
-        pmo3610_auto_mouse_behavior: pmo3610_auto_mouse_behavior {
-            compatible = "zmk,behavior-automouse";
-            #binding-cells = <0>;
-            target-layer = <5>; // MOUSE（上から2番目＝レイヤー1）に飛ばす
-            delay-ms = <0>;
-            timeout-ms = <1000>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E     &kp R           &kp T                                                 &kp Y        &kp U  &kp I     &kp O         &kp P
-&kp A       &kp S         &kp D     &kp F           &kp G            &kp GRAVE        &kp ESC             &kp H        &kp J  &kp K     &kp L         &mkp MB4
-&kp Z       &kp X         &kp C     &kp V           &kp B            &kp TAB          &kp RIGHT_BRACKET   &kp N        &kp M  &mkp MB1  &lt 4 PERIOD  &mkp MB2
-&lt 3 INT2  &kp LEFT_WIN  &kp LALT  &kp LEFT_SHIFT  &mt LSHFT SPACE  &lt 2 SPACE      &kp BACKSPACE       &lt 1 ENTER                                &mkp MB5
-            >;
-        };
-
-        ARROW {
-            bindings = <
-&kp TAB  &kp PLUS      &kp N7        &kp N8        &kp N9                               &kp ESC  &kp F4          &kp PRINTSCREEN  &kp F11          &kp LG(F12)
-&kp TAB  &kp MINUS     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp GRAVE      &trans  &trans   &kp F2          &kp UP_ARROW     &kp F4           &kp LC(V)
-&trans   &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp TAB        &trans  &trans   &kp LEFT_ARROW  &kp DOWN         &kp RIGHT_ARROW  &kp LC(C)
-&trans   &trans        &kp PERIOD    &kp PERIOD    &kp N0        &kp SPACE      &trans  &trans                                                     &kp LC(Z)
-            >;
-        };
-
-        NUM {
-            bindings = <
-&kp GRAVE                &kp NUMBER_7  &kp NUMBER_8  &kp LG(LS(NUMBER_4))  &kp PLUS                                          &kp CARET         &kp AMPERSAND    &kp LS(N8)         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &kp ASTERISK  &trans      &trans                  &kp QUESTION      &kp EXCLAMATION  &kp RIGHT_BRACKET  &kp BACKSLASH         &kp SEMI
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp PERIOD    &trans      &trans                  &kp LEFT_BRACKET  &kp AT_SIGN      &kp COMMA          &kp PERIOD            &kp MINUS
-&trans                   &trans        &trans        &trans                              &trans      &trans      &trans      &kp LEFT_SHIFT                                                              &trans
-            >;
-        };
-
-        FUNCTION {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
-            >;
-        };
-
-        SCROLL {
-            bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans                      &trans  &trans  &trans            &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans            &trans  &trans
-&kp F12     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_CONTROL  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans                                    &trans
+&kp Q      &kp W         &kp E             &kp R           &kp T                                                 &kp Y            &kp U     &kp I         &kp O    &kp P
+&kp A      &kp S         &kp D             &kp F           &kp G        &mo 6                 &kp BACKSLASH      &kp H            &kp J     &kp K         &kp L    &kp MINUS
+&kp Z      &kp X         &kp C             &kp V           &kp B        &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp N            &kp M     &kp COMMA     &kp DOT  &lt 2 SLASH
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &lt 4 SPACE  &kp LA(SPACE)         &kp ENTER          &lt 3 BACKSPACE                                   &lt 5 ESCAPE
             >;
         };
 
         MOUSE {
             bindings = <
-&kp LG(Q)      &kp LC(W)  &trans     &trans     &trans                      &bt BT_PRV  &bt BT_NXT  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp LG(LS(Z))  &trans     &kp LC(C)  &trans     &trans  &trans      &trans  &trans      &trans      &trans        &trans        &mkp MB4
-&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans      &trans  &trans      &trans      &mkp MB1      &lt 5 PERIOD  &mkp MB2
-&trans         &trans     &trans     &trans     &trans  &trans      &trans  &trans                                              &mkp MB5
+&trans         &trans         &trans            &trans          &trans                                           &trans           &trans    &trans        &trans      &trans
+&trans         &trans         &trans            &trans          &trans       &trans           &trans             &trans           &mkp MB1  &mkp MB3      &mkp MB2    &trans
+&trans         &trans         &trans            &trans          &trans       &trans           &trans             &trans           &trans    &trans        &trans      &trans
+&kp LCTRL      &kp LEFT_ALT   &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans       &trans           &trans             &mo 3                                                &trans
+            >;
+        };
+
+        SCROLL {
+            bindings = <
+&kp ESCAPE  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp F12     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp F12     &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        ARROW {
+            bindings = <
+&kp GRAVE  &kp LC(LS(TAB))         &kp LG(RIGHT)   &kp NUMBER_9     &kp NUMBER_0                                   &trans  &kp RC(LEFT_ARROW)  &kp UP_ARROW      &kp RC(RIGHT_ARROW)  &kp LG(P)
+&kp TAB    &kp LA(LG(LEFT_ARROW))  &kp LG(LEFT)    &kp LG(LA(RIGHT_ARROW))  &kp LEFT_BRACKET   &trans      &trans  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &kp LG(K)
+&kp LCMD   &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp RIGHT_BRACKET  &trans      &trans  &trans  &trans              &kp LC(UP_ARROW)  &trans               &kp LG(L)
+&trans     &trans                  &kp LEFT_SHIFT  &trans                   &trans             &trans      &trans  &trans                                                              &trans
+            >;
+        };
+
+        NUM {
+            bindings = <
+&kp GRAVE                &kp NUMBER_7  &kp NUMBER_8  &kp LG(LS(NUMBER_4))  &kp PLUS                          &kp BACKSLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SEMICOLON
+&kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &kp ASTERISK  &trans      &trans  &kp EXCLAMATION  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp PERIOD    &trans      &trans  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+&trans                   &trans        &trans        &trans                &trans        &trans      &trans  &kp LEFT_SHIFT                                             &trans
+            >;
+        };
+
+        FUNCTION {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp LG(Q)      &kp LC(W)  &trans     &trans     &trans                      &bt BT_PRV     &bt BT_NXT       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&kp LG(LS(Z))  &trans     &kp LC(C)  &trans     &trans  &trans      &trans  &trans         &trans           &trans        &trans        &trans
+&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans  &trans      &trans  &trans         &trans           &trans        &trans        &trans
+&trans         &trans     &trans     &trans     &trans  &trans      &trans  &trans                                                      &trans
             >;
         };
     };
-};
-
-&pmo3610_listener {
-    status = "okay";
-    layers = <5>;
 };
